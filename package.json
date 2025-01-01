@@ -1,15 +1,29 @@
 {
-  "name": "zenn",
-  "module": "index.ts",
-  "type": "module",
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "dependencies": {
-    "zen-cli": "^0.0.2",
-    "zenn-cli": "^0.1.158"
-  }
+	"name": "zenn",
+	"module": "index.ts",
+	"type": "module",
+	"scripts": {
+		"dev": "zenn preview",
+		"new:article": "zenn new:article",
+		"lint": "biome lint <files>",
+		"format": "biome format <files>",
+		"check": "biome check <files>",
+		"lint:fix": "biome lint --apply <files>",
+		"format:fix": "biome format <files> --write",
+		"check:fix": "biome check --apply <files>"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.3",
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"dependencies": {
+		"zen-cli": "^0.0.2",
+		"zenn-cli": "^0.1.158",
+		"@commitlint/cli": "^19.5.0",
+		"@commitlint/config-conventional": "^19.5.0",
+		"lefthook": "^1.7.18"
+	}
 }
